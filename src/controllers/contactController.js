@@ -2,14 +2,6 @@ const contactModel = require('../models/contactSchema')
 
 const {contactValidator} = require('../validator/contactValidator')
 
-const getHome = (req, res) => {
-   
-}
-
-const getContact = (req, res) => {
-    res.send(`<h2>This is a contact page</h2>`)
-}
-
 const postContact = async (req, res) => {
     try {
         const {fullName, email, phoneNumber, message} = req.body
@@ -39,4 +31,4 @@ const postContact = async (req, res) => {
     }
 };
 
-module.exports = { getHome, getContact, postContact}
+module.exports = { postContact}

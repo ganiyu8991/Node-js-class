@@ -6,7 +6,6 @@ const cors = require('cors')
 const app = express();
 require('dotenv').config()
 
-const {getHome, getContact} = require('./controllers/contactController')
 const userRoute = require('./routes/userRoute')
 
 mongoose.connect(process.env.MONGODB_URI)
